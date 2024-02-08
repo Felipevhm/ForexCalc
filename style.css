@@ -1,0 +1,266 @@
+*{
+  /* margin: 0;
+  padding: 0; */
+
+  box-sizing: border-box;
+  font-size: 18rem;
+
+  --lighter-gray: #f5f3ee;
+  --simple-gray: #f2f2f2;
+  --darker-gray:#ddd;
+
+  --primary-color: #0D47A1;
+  --secondary-color: #FFC107;
+  --background-color: #FFFFFF;
+  --text-color: #212121;
+  --subtle-color: #757575;
+
+  --border-radius-value: 10rem;
+
+
+    /* font-family: 'Roboto Mono', monospace;
+    font-family: 'Montserrat', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+    
+}
+:root{
+  font-size: 6.25%;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 20rem 40rem;
+  
+  /* background: var(--primary-color); */
+
+  background: rgb(2,0,36);
+  background: linear-gradient(
+              38deg,
+              rgba(2,0,36,1) 0%,
+              rgba(13,71,161,1) 35%,
+              rgba(25,32,33,1) 72%);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow-x: hidden;
+
+}
+
+header{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ 
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif; 
+  color: var(--secondary-color);
+  text-shadow: 2rem 2rem 4rem rgba(0, 0, 0, 0.5);
+
+  margin-top: 10rem;
+}
+
+nav{
+  background-color: var(--simple-gray);
+  border: 1rem solid var(--subtle-color);
+
+  height: 35.2546rem;
+  width: 100%;
+
+  padding: 8rem;  
+  margin-top: 10rem;
+
+  font-weight: 700;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  border-radius: var(--border-radius-value) var(--border-radius-value) 0 0 ;
+ 
+}
+
+table {
+  width: 100%;
+  border-collapse:collapse;
+  border-radius:  5rem 5rem 0 0;
+
+ 
+}
+
+tbody{
+  border-top: none;
+  background-color: var(--background-color);
+
+  
+}
+
+th, td {
+  border: 1rem solid #ddd;
+  padding: 8rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--lighter-gray);
+}
+
+/* #entrada{
+  width:100rem;
+  height: 100rem;;
+} */
+
+
+
+input,span{
+  font-family: 'Roboto Mono', monospace;
+  color: var(--text-color);
+}
+
+p{
+  color: var(--text-color);
+}
+
+
+
+.full-width{
+  width: 2000rem;
+}
+
+#bottom-left-td {
+  border-bottom-left-radius: var(--border-radius-value);
+  border: none;
+}
+#last-th {
+  border-bottom-right-radius: var(--border-radius-value);
+  border: none;
+}
+
+
+
+
+.labels{
+  font-family: 'Montserrat', sans-serif; 
+  text-align: center;
+
+  
+}
+
+.text-percentage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.text-percentage p{
+  margin: 0;
+}
+
+.percentage{
+  font-family: 'Rubik', sans-serif;
+  font-size: 30rem;
+}
+
+.input-wrapper-meta-percentual{
+  font-size: 12rem;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  gap: 8rem;
+
+  
+}
+
+.input-wrapper-meta-percentual label{
+  margin-top: 5rem;
+  width: 100rem;
+}
+
+
+
+.money-visualizer{
+
+  height: 30rem;
+  width: 83.5%; /*100%*/
+
+  text-align: center;
+  font-size: 16rem;
+  
+  background-color:var(--simple-gray);
+  color:#000000;
+  border-radius: 5rem;
+  border: 1rem solid var(--subtle-color);
+}
+
+#toggleButton {
+
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 18rem;
+  background-color: rgb(79, 121, 79);
+  color: white;
+  padding: 10rem;
+  cursor: pointer;
+  border: none;
+  
+  width: 100%;
+  border-radius: 5rem;
+}
+
+footer{
+  margin-top: 10rem;
+
+}
+#logo{
+  height: 80rem;
+  filter: brightness(108%);
+  /* filter: hue-rotate(44deg); */
+}
+
+footer p{
+  font-family: 'Roboto Mono', monospace;
+  color: var(--simple-gray);
+  position: absolute;
+  bottom: 7rem;
+  right: 70rem;
+}
+
+#margemOperacaoBox{
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+ 
+}
+
+main{
+ animation: appear 1s forwards ease-in-out; 
+}
+
+@keyframes appear{
+  0%{
+    transform: scale(0.96) translateY(-5vh);
+    opacity: 0;
+    
+  }
+    50%{opacity:(0.7);
+      transform: scale(1.01);
+    }
+  100%{
+    transform: scale(1);
+  }
+  }

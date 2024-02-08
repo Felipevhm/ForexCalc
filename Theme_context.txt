@@ -1,0 +1,28 @@
+Here are colors descriptions the forex calculator website that align with a modern, trustworthy, minimalist, and soft appearance:
+
+1. **Primary Color** (for important elements like buttons and links): `#0D47A1` - This is a strong, trustworthy blue that's perfect for important interactive elements.
+
+2. **Secondary Color** (for highlighting important information): `#FFC107` - This is a soft, warm yellow that can be used to highlight important information without being too overwhelming.
+
+3. **Background Color**: `#FFFFFF` - A clean, white background gives a minimalist, modern feel.
+
+4. **Text Color**: `#212121` - This is a soft black that's easy on the eyes and maintains excellent readability.
+
+5. **Subtle Color** (for less important information): `#757575` - This is a soft gray that can be used for less important text, borders, etc.
+
+Declaring these on CSS:
+
+```css
+:root {
+  --primary-color: #0D47A1;
+  --secondary-color: #FFC107;
+  --background-color: #FFFFFF;
+  --text-color: #212121;
+  --subtle-color: #757575;
+}
+<<<<<<< HEAD
+```
+=======
+```
+
+>>>>>>> 82e90fddeae6f0b351164cfbf00e9c86b6decf2f

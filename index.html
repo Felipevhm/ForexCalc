@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💲 ForexCalc</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Calculadora de Forex</h1>
+
+    </header>
+   
+    <main>
+      <nav>
+        <h2>EUR/USD</h2>
+        <p span id="exchangeRate"></p>
+      </nav>
+    <table>
+     
+          <tr>
+              <td class="labels">N° DE CONTRATOS</td>
+              <td><input 
+                id="nContratos" 
+                class="money-visualizer"
+                onchange="compute(event)" 
+                type="number" 
+                value="1" >
+              </input> </td>
+              <td class="labels">Alavancagem</td>
+              <td><input 
+                id="alavancagem" 
+                class="money-visualizer"
+                type="number" 
+                onchange="compute(event)" 
+                value="100" >
+              </input> </td>
+       
+
+                        
+          </tr>
+          <tr class="full-width">
+            <td class="labels">Entrada</td>
+            <td>
+              <input  
+              id="entrada" 
+              class="money-visualizer"
+              type="number" 
+              value="1.08830" 
+              onchange="compute(event)" 
+              step="0.00001" >
+            </td>          
+            <td><button id="toggleButton" onclick="toggleButtonText(event)">Long</button></td>
+            <td id="margemOperacaoBox" class="labels">
+              <span> Margem em Operação</span>
+              <div class="p-wrapper"> 
+                <p id="margemOperacao" value="$127">$1088.30</p>
+              </div>  
+            </td>
+            <!-- <td><p id="margemOperacao" value="$127">$1088.30</p></td> -->
+
+           <!-- <th></th>  -->
+          </tr>
+          <tr class="t3">
+            <td class="labels">GAIN MÁX</td>
+            <td class="text-percentage">
+              <p id="alvo-output" value="$127">$2000.00</p> 
+              <p id="alvo-percentage" class="percentage" style="color: green;">20.00%</p>
+            </td>
+
+            <td class="labels">ALVO</td>
+            <td><input id="alvo-input"
+                       class="money-visualizer"
+                       step="0.00001"
+                       onchange="compute(event)"
+                       type="number"
+                       value="1.10830"
+                       >
+                </input>
+            </td>
+         
+          </tr>
+
+          <tr>
+          <td  class="labels">STOP MÁX</td>
+          <td class="text-percentage">
+            <p id="stop-output" value="$127">$1000.00</p> 
+            <p id="stop-percentage" class="percentage" style="color: red;">-10.00%</p>
+          </td>
+          
+        
+            <td class="labels">STOP </td>
+            <td>  <input id="stop-input"
+              class="money-visualizer"
+              type="number" 
+              onchange="compute(event)" 
+              step="0.00001" 
+              value="1.07830">
+            </input>
+          </td>
+
+
+      
+        </tr>
+          <tr>
+              <td id="teste" class="labels">Lucro Parcial</td>
+              <td class="text-percentage">
+                <p id="partial-output" value="$3,50">$500.00</p>
+                <p id="partial-percentage" class="percentage" style="color:#757575;">5.00%</p>
+              </td>
+
+
+
+              <td class="labels">Parcial</td>
+              <td>
+                <input id="partial-input" 
+                class="money-visualizer"
+                type="number" 
+                onchange="compute(event)" 
+                step="0.00001" 
+                value="1.09330" >
+                </input>
+              </td>
+             
+          </tr>
+
+          <tr>
+              <td id="bottom-left-td" class="labels">Valor da Conta</td>
+              <td>
+                <input id="conta" class="money-visualizer" type="number" 
+                onchange="compute(event)" 
+                step="0.01" 
+                value="10000.00">
+                </input>
+              </td>
+              
+              <td class="labels">Meta</td>
+              <td id="last-th">
+                <div class="input-wrapper-meta-percentual">
+                  <input id="meta-input"
+                           
+                          class="money-visualizer"
+                          type="number" 
+                          onchange="compute(event)" 
+                          step="0.01"
+                          value="1.00">
+                  </input> 
+                  <label for="meta-input" style="color:#757575"> <i>% da banca</i></label>
+                </div>
+              </td>
+             <!-- <th id="last-th"></th> -->
+               
+          
+    </table>
+  </main>
+  </div>
+
+    <footer>
+     <img id="logo" src="./assets/logo_penido.png" alt="logo da comunidade penido">
+     <p>por Felipe V. H. Manhães</p>
+    </footer>
+
+            <script src="./main.js"></script>
+     
+</body>
+
+</html>
